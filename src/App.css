@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #ffffff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.header{
+  text-align: center;
+  margin-top: 5px;
+}
+.content{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 20px;
+}
+.inputGit {
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: medium;
+  width: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  margin-right: 20px;
+}
+.inputGit:focus {
+  border-color: #0056b3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.btnGit{
+  background-color: #007bff;
+  border: none;
   color: white;
+  font-size: medium;
+  width: 10%;
+  padding: 7px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btnGit:hover {
+  background-color: #0055b1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.output{
+  margin-top: 20px;
+}
+.imgGit{
+  width: 160px;
+  height: 140px;
+  display: inline-block;
+}
+.repoGit{
+  margin-top: 10px;
+}
+.row1 {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1* var(--bs-gutter-y));
+  padding-left: 50px;
+  padding-right: 50px;
+}
+p{
+  margin-bottom: 0;
+}
+.repo {
+  border: 1px solid #ccc;
+  padding: 7px;
+  margin: 10px ;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  border: 2px solid #007bff;
 }
 
-.App-link {
-  color: #61dafb;
+/******************************/
+.light-mode {
+  color: #000000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.light-mode .inputGit {
+  color: #000000;
+}
+
+.dark-mode {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+.dark-mode body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .inputGit {
+  background-color: #252525;
+  color: rgb(255, 255, 255);
+}
+
+.dark-mode .repo {
+  background-color: #252525;
+  color: rgb(255, 255, 255);
+}
+
+.dark-mode h3, .dark-mode h1, .dark-mode .nick {
+  color: rgb(255, 255, 255);
+}
+/******************************/
+
+
+
+@media (max-width: 1000px) {
+  .inputGit {
+    width: 65%;
   }
-  to {
-    transform: rotate(360deg);
+  .btnGit{
+    width: 15%;
   }
 }
+@media (max-width: 600px) {
+  .inputGit {
+    width: 55%;
+  }
+  .btnGit{
+    width: 25%;
+  }
+}
+
